@@ -7,7 +7,7 @@ const FullNameForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); // Prevent the default behavior of form submission (reloading the page)
     if (firstName && lastName) {
       setFullName(`${firstName} ${lastName}`);
       setIsSubmitted(true);
@@ -18,7 +18,7 @@ const FullNameForm = () => {
 
   return (
     <div style={{ marginLeft: "10px" }}>
-      <h1>Full Name Display</h1>
+      <h1>Full Name Display</h1> {/* Added top heading */}
       <form onSubmit={handleSubmit} style={{ display: "inline-block" }}>
         <label>
           First Name:
