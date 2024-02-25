@@ -11,6 +11,8 @@ const FullNameForm = () => {
     if (firstName && lastName) {
       setFullName(`${firstName} ${lastName}`);
       setIsSubmitted(true);
+      setFirstName("");
+      setLastName("");
     }
   };
 
