@@ -20,9 +20,8 @@ const FullNameForm = () => {
     <div style={{ marginLeft: "10px" }}>
       <h1>Full Name Display</h1> {/* Added top heading */}
       <form onSubmit={handleSubmit} style={{ display: "inline-block" }}>
-        <label>
+        <label style={{ display: "block" }}>
           First Name:
-          <br />
           <input
             type="text"
             value={firstName}
@@ -30,10 +29,8 @@ const FullNameForm = () => {
             required
           />
         </label>
-        <br />
-        <label>
+        <label style={{ display: "block" }}>
           Last Name:
-          <br />
           <input
             type="text"
             value={lastName}
@@ -41,11 +38,12 @@ const FullNameForm = () => {
             required
           />
         </label>
-        <br />
-        <button type="submit">Submit</button>
+        <button type="submit" style={{ display: "block", marginTop: "10px" }}>
+          Submit
+        </button>
       </form>
       {isSubmitted && (
-        <p style={{ display: "inline-block", marginLeft: "10px" }}>
+        <p style={{ display: "block", marginTop: "10px" }}>
           Full Name: {fullName}
         </p>
       )}
