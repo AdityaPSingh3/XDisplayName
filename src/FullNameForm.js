@@ -11,8 +11,6 @@ const FullNameForm = () => {
     if (firstName && lastName) {
       setFullName(`${firstName} ${lastName}`);
       setIsSubmitted(true);
-      setFirstName("");
-      setLastName("");
     }
   };
 
@@ -24,7 +22,7 @@ const FullNameForm = () => {
           First Name:
           <input
             type="text"
-            value={firstName}
+            value={isSubmitted ? fullName.split(" ")[0] : firstName}
             onChange={(e) => setFirstName(e.target.value)}
             required
           />
@@ -33,7 +31,7 @@ const FullNameForm = () => {
           Last Name:
           <input
             type="text"
-            value={lastName}
+            value={isSubmitted ? fullName.split(" ")[1] : lastName}
             onChange={(e) => setLastName(e.target.value)}
             required
           />
